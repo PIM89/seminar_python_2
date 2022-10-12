@@ -10,9 +10,10 @@ while True:
     except ValueError:
         print('Ошибка. Ожидалось целое положительное число.')
 
-list = []
+my_list = []
 for i in range(1, num + 1):
     elem = round(((1 + 1/i)**i), 2)
-    list.append(elem)
-print(list)
-print(f'Сумма последовательности равна: {sum(list)}')
+    my_list.append(elem)
+myDict = {i+1: my_list[i] for i in range(0, len(my_list))}
+print(myDict)
+print(f'Сумма последовательности равна: {sum(my_list)}')

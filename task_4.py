@@ -1,7 +1,5 @@
-# Задайте число N, создайте список: [-N, N]. Найдите произведение элементов на
-# указанных позициях. Позиции (случайные) хранятся в файле file.txt (создаётся во
-# время выполнения кода и зависит от количества элементов в списке) в одной
-# строке одно число.
+# Задайте число N, создайте список: [-N, N]. Найдите произведение элементов на указанных позициях.
+# Позиции хранятся в файле file.txt в одной строке одно число.
 
 from random import randint
 
@@ -28,8 +26,8 @@ with open('text.txt', 'w') as file:
 with open('text.txt', 'r') as file:
     lines = file.read().splitlines()
     multiply = 1
+    position_elem = ''
     for i in range(num):
+        print(f'{i+1} позиция: {lines[i]}')
         multiply *= list[int(lines[i])]
-        print(list[int(lines[i])], end= ' ')
-
-print(f'\nПроизведение равно: {multiply}')
+print(f'Произведение равно: {multiply}')
